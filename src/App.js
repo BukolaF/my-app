@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import MyButton from './Button';
+import Sales from './Price';
+import ShoppingLists from './ShoppingList';
+import WelcomeMessage, { Avatar } from './Welcome';
 
-function App() {
+export default function App() {
+  const name = "CUPID";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <h1 className="Heading">
+        {name} CLOTHINGS <MyButton />
+      </h1>
+      <section className="Divider"></section>
+      <br />
+      <Avatar />
+      <WelcomeMessage />
+      <ShoppingLists />
+      <Sales discount={500} />
+    </div> 
   );
 }
-
-export default App;
